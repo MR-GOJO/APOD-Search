@@ -72,18 +72,20 @@ function getFavoritesFromLocalStorage() {
 }
 
 function displayFavorites(favorites) {
-    favoritesContainer.innerHTML = '';
-    favorites.forEach(apodData => {
-        const favoriteItem = document.createElement('div');
-        favoriteItem.classList.add('favoriteItem');
-        favoriteItem.innerHTML = `
+  favoritesContainer.innerHTML = "";
+  favorites.forEach((apodData) => {
+    const favoriteItem = document.createElement("div");
+    favoriteItem.classList.add("favoriteItem");
+    favoriteItem.innerHTML = `
+        <img class="favoriteImg" src="${apodData.url}" data-hdurl="${apodData.hdurl}" alt="${apodData.title}" width="100px" height="100px">
+        <div class="content">
             <h3>${apodData.title}</h3>
             <p>Date: ${apodData.date}</p>
-            <img class="favoriteImg" src="${apodData.url}" data-hdurl="${apodData.hdurl}" alt="${apodData.title}">
             <button class="deleteBtn">Delete</button>
+            </div>
         `;
-        favoritesContainer.appendChild(favoriteItem);
-    });
+    favoritesContainer.appendChild(favoriteItem);
+  });
 }
 
 function addToFavorites(apodData) {

@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>APOD Search</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/img/logo.jpg" type="image/x-icon" />
+  </head>
+  <body>
     <header>
-        <h1>Astronomy Picture of the Day</h1>
+      <h1>Astronomy Picture of the Day</h1>
     </header>
     <main>
-        <form id="dateForm">
-            <label for="dateInput">Enter a date (YYYY-MM-DD):</label>
-            <input type="date" id="dateInput" required>
-            <button type="submit">Search</button>
-        </form>
-        <div id="apodContainer"></div>
-        <div id="favoritesContainer"></div>
+      <form id="dateForm">
+        <label for="dateInput">Enter a date (DD-MM-YYYY):</label>
+        <input type="date" id="dateInput" required />
+        <button type="submit">Search</button>
+      </form>
+      <div id="apodContainer"></div>
+      <div id="favoritesContainer"></div>
     </main>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
