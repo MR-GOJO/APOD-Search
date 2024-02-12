@@ -146,8 +146,8 @@ button:hover {
 
 .favoriteImg {
   min-width: 180px;
-  max-width: 180px;
   min-height: 180px;
+  max-width: 180px;
   max-height: 180px;
 }
 
@@ -196,10 +196,10 @@ button:hover {
   }
 
   .apodItem img {
-    max-width: 100%;
-    min-width: unset;
-    max-height: unset;
-    min-height: unset;
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 400px;
+    min-height: 300px;
   }
 
   .title {
@@ -244,6 +244,7 @@ button:hover {
 @media only screen and (max-width: 768px) {
   .favoriteImg {
     width: 150px;
+    max-height: 200px;
   }
 }
 
@@ -255,7 +256,24 @@ button:hover {
 
   .favoriteImg {
     min-width: 250px;
-    max-width: 250px;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .favoriteItem {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .favoriteImg {
+    min-width: 430px;
+    min-height: 300px;
+    max-width: none;
+    max-height: 300px;
   }
 
   .content {
