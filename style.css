@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #493c81;
-  background: linear-gradient(to bottom, #463a7a, #0f0f0f);
+  background: linear-gradient(to bottom, #463a7a, #191919f1);
   text-align: center;
   color: #fff;
   min-height: 100vh;
@@ -63,6 +63,14 @@ button:hover {
   background-color: #555;
 }
 
+.favorites {
+  margin-left: 10px;
+}
+
+.main-container {
+  margin-top: 70px;
+}
+
 #apodContainer {
   margin-bottom: 2rem;
 }
@@ -72,9 +80,19 @@ button:hover {
 }
 
 .apodItem img {
-  max-width: 100%;
+  max-width: 500px;
+  min-width: 500px;
+  max-height: 400px;
+  min-height: 400px;
   height: auto;
   cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
 }
 
 .apodItem h2 {
@@ -84,6 +102,7 @@ button:hover {
 #favoritesContainer {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 100px;
 }
 
 .favoriteItem {
@@ -110,15 +129,126 @@ button:hover {
 
 #favoritesContainer div {
   display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .favoriteImg {
-  min-width: 150px;
-  min-height: 150px;
+  min-width: 180px;
+  max-width: 180px;
+  min-height: 180px;
+  max-height: 180px;
 }
 
 .content {
-  border: 1px solid #8d1f1f;
+  border: none;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0px;
+  padding: 0 15px;
+}
+
+.date {
+  font-weight: bold;
+  color: rgb(224, 224, 224);
+  font-size: 1.1rem;
+}
+
+.deleteBtn {
+  max-width: 90px;
+  max-height: 90px;
+  margin-bottom: 10px;
+}
+
+.explanation {
+  line-height: 1.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    font-size: 1.2rem;
+  }
+
+  .apodItem img {
+    max-width: 100%;
+    min-width: unset;
+    max-height: unset;
+    min-height: unset;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    font-size: 1rem;
+  }
+
+  .apodItem img {
+    max-width: 100%;
+    min-width: unset;
+    max-height: unset;
+    min-height: unset;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-top: 0px;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+
+  .explanation {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: -40px;
+  }
+
+  label {
+    margin-bottom: 0.8rem;
+  }
+
+  input {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  button {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .favoriteImg {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .favoriteItem {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .favoriteImg {
+    min-width: 250px;
+    max-width: 250px;
+  }
+
+  .content {
+    margin-left: 0;
+  }
 }

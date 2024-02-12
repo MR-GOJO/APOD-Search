@@ -57,11 +57,13 @@ function displayApod(apodData) {
   const apodItem = document.createElement("div");
   apodItem.classList.add("apodItem");
   apodItem.innerHTML = `
-        <h2>${apodData.title}</h2>
+  <div class="main-container">
+        <h2 class="title">${apodData.title}</h2>
         <p class="date">${apodData.date}</p>
-        <p class="explanation">${apodData.explanation}</p>
         <img class="apodImg" src="${apodData.url}" data-hdurl="${apodData.hdurl}" alt="${apodData.title}">
+        <p class="explanation">${apodData.explanation}</p>
         <button class="favBtn">Add to Favorites</button>
+        </div>
     `;
   apodContainer.innerHTML = "";
   apodContainer.appendChild(apodItem);
